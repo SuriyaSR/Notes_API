@@ -26,6 +26,11 @@ import lombok.RequiredArgsConstructor;
 public class NoteController {
 
 	private final NoteService noteService;
+	
+	@GetMapping("/")
+	public String home() {
+	    return "Notes API is running!";
+	}
 
 	@Operation(summary = "Create a new note")
 	@PostMapping("/note")
